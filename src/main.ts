@@ -43,8 +43,8 @@ const INITIALIZE = (): void => {
     } else {
         console.error("Element not found");
     }
-}
+} 
 
 INITIALIZE();
-
+ 
 

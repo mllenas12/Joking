@@ -1,0 +1,17 @@
+$theme-colors: (
+  "primary": #03d1dc,
+);
+
+// @import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+* {
+  color: #454040;
+}
+
+#main-container {
+  background-image: url(/assets/dance.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  height: 50vw;
+}
