@@ -13,25 +13,32 @@
       <div class="fw-bold p-lg-4 p-3 small">
         <p>Avui: parcialment ennuvolat</p>
       </div>
-    <!-- MAIN CONTENT -->
+      <!-- MAIN CONTENT -->
       <div
-        class="container-fluid bg-white rounded-4 shadow col-lg-7 col-10 p-lg-5 py-5 mt-lg-5 text-center">
+        id="cont"
+        class="container-fluid bg-white rounded-4 shadow col-lg-7 col-10 p-lg-5 py-5 mt-lg-5 text-center"
+      >
         <h2>Preparat per riure? 🤣</h2>
-        <p id="displayed-joke" class="p-lg-4 p-2 py-4 fw-bold">
-          "Can a kangaroo jump highter than the Empire State Building? Of
-          course. The Empire State Building can't jump."
-        </p>
+        <!-- Displayed joke:  -->
+        <p id="displayed-joke">Can a kangaroo jump highter than the Empire State Building? Of course. The Empire State Building can't jump.</p>
+        <div>
+          <p>Puntua l'acudit!</p>
+          <button class="bg-primary" id="score-1">1</button>
+          <button class="bg-primary" id="score-2">2</button>
+          <button class="bg-primary" id="score-3">3</button>
+        </div>
         <div class="pb-2">
           <button
             id="btn"
-            class="btn-primary bg-primary rounded-3 text-white small px-4 py-3 border-0 shadow">
+            class="btn-primary bg-primary rounded-3 text-white small px-4 py-3 border-0 shadow mt-3"
+          >
             Següent acudit
           </button>
         </div>
       </div>
     </div>
 
-    <script src="/src/main.js"></script>
+    <script type="module" src="/dist/main.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

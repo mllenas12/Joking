@@ -11327,4 +11327,9 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-size: 100vw;
   height: 50vw;
+}
+
+#displayed-joke {
+  padding-top: 30px;
+  font-weight: bold;
 }/*# sourceMappingURL=styles.css.map */
