@@ -10,8 +10,8 @@
     <!-- BODY -->
     <div class="container-fluid" id="main-container">
       <!-- HEADER -->
-      <div class="fw-bold p-lg-4 p-3 small">
-        <p>Avui: parcialment ennuvolat</p>
+      <div class="fw-bold p-lg-4 p-3 small" id="weather-cont">
+        <div id="spinner"></div>
       </div>
       <!-- MAIN CONTENT -->
       <div
@@ -20,7 +20,9 @@
       >
         <h2>Preparat per riure? 🤣</h2>
         <!-- Displayed joke:  -->
-        <p id="displayed-joke">Can a kangaroo jump highter than the Empire State Building? Of course. The Empire State Building can't jump.</p>
+        <p id="displayed-joke">
+          Can a kangaroo jump highter than the Empire State Building? Of course. The Empire State Building can't jump.
+        </p>
         <div>
           <p>Puntua l'acudit!</p>
           <button class="bg-primary" id="score-1">1</button>
@@ -39,6 +41,7 @@
     </div>
 
     <script type="module" src="/dist/main.js"></script>
+    <script type="module" src="/dist/weather.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

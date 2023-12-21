@@ -11332,4 +11332,8 @@ textarea.form-control-lg {
 #displayed-joke {
   padding-top: 30px;
   font-weight: bold;
+}
+
+#weather-cont {
+  display: flex;
 }/*# sourceMappingURL=styles.css.map */
