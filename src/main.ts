@@ -1,19 +1,35 @@
 import { Report } from './interfaces.js'
 
 // Fetch a random joke from the API url
-const getJokesFromApi = async (): Promise<string> => {
+const getDadJokesFromApi = async (): Promise<string> => {
     try {
-        const ANS: Response = await
+        const res: Response = await
             fetch('https://icanhazdadjoke.com/', {
                 headers: {
                     Accept: "application/json"
                 },
             });
-        if (!ANS) {
+        if (!res.ok) {
             throw new Error('Error fetching joke from API.')
         }
-        const JOKE_DATA: { joke: string } = await ANS.json();
+        const JOKE_DATA: { joke: string } = await res.json();
         return JOKE_DATA.joke;
+
+    } catch (error) {
+        console.error('Error fetching joke');
+        throw error;
+    }
+}
+
+const getChuckJokesFromApi = async (): Promise<string> => {
+    try {
+        const res: Response = await
+            fetch('https://api.chucknorris.io/jokes/random');
+        if (!res.ok) {
+            throw new Error('Error fetching joke from API.')
+        }
+        const JOKE_DATA: { value: string } = await res.json();
+        return JOKE_DATA.value;
 
     } catch (error) {
         console.error('Error fetching joke');
@@ -38,11 +54,25 @@ const displayJoke = (joke: string): void => {
         console.error("element not found")
     }
 }
-// Handle display and get new joke when click the "Següent acudit" button
+
+// Choose randomly if the joke is from Dad Api or Chuck Norris Api
+const chooseRandomApi = (API_DAD: string, API_CHUCK: string) => {
+    const randomNum = Math.random();
+    let apiReturned: string = "";
+    if (randomNum < 0.5) {
+        return apiReturned = API_DAD;
+    } else {
+        return apiReturned = API_CHUCK;
+    }
+}
+
+// Handle click when clicking the "Següent acudit" button
 const handleClick = async (): Promise<void> => {
     try {
-        const CURRENT_JOKE: string = await getJokesFromApi();
-        displayJoke(CURRENT_JOKE);
+        const API_DAD: string = await getDadJokesFromApi();
+        const API_CHUCK: string = await getChuckJokesFromApi();
+        const chosenApi: any = chooseRandomApi(API_DAD, API_CHUCK);
+        displayJoke(chosenApi);
     } catch (error) {
         console.error('Failed to get a joke');
     }

@@ -54,7 +54,6 @@ const displayTemperature = (temp: number) => {
 const displayWeatherInfo = async (): Promise<void> => {
     try {
         const weatherData: OpenWeatherData = await getWeatherFromApi();
-        console.log(weatherData)
         const iconUrl: string = getIconUrl(weatherData.weather[0].icon)
         showWeatherInfo(iconUrl);
 
