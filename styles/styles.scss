@@ -1,28 +1,15 @@
 $theme-colors: (
-  "primary": #03d1dc,
+  "primary": #f5c82e,
 );
 
 // @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
-* {
-  color: #454040;
+#weather-cont img{
+width: 5vw;
 }
 
-#main-container {
-  background-image: url(/assets/dance.jpg);
-  background-repeat: no-repeat;
-  background-size: 100vw;
-  height: 50vw;
-}
+#weather-cont p{
+  margin: 0;
+  }
 
-#displayed-joke{
-  padding-top: 30px;
-  font-weight: bold;
-}
-
-
-#weather-cont {
-  display: flex;
-  
-}

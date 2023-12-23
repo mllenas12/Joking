@@ -6,38 +6,35 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body style="background-image: url(assets/blob5.svg); background-repeat: no-repeat; background-position: center; background-size: 100vw;">
+    <div class="container-fluid" id="main-container" >
     <!-- BODY -->
-    <div class="container-fluid" id="main-container">
       <!-- HEADER -->
-      <div class="fw-bold p-lg-4 p-3 small" id="weather-cont">
+      <header class="fw-bold mt-2 d-flex justify-content-start align-items-center" id="weather-cont">
         <div id="spinner"></div>
-      </div>
+      </header>
       <!-- MAIN CONTENT -->
-      <div
-        id="cont"
-        class="container-fluid bg-white rounded-4 shadow col-lg-7 col-10 p-lg-5 py-5 mt-lg-5 text-center"
-      >
-        <h2>Preparat per riure? 🤣</h2>
+      <div class="container-fluid text-center col-12 col-sm-7 mt-5 text-white" id="cont">
+        <h2 class="mb-3">Preparat per riure? 🤣</h2>
         <!-- Displayed joke:  -->
-        <p id="displayed-joke">Can a kangaroo jump highter than the Empire State Building? Of course. The Empire State Building can't jump.</p>
-        <div>
+        <p id="displayed-joke" class="fw-bold my-4">Can a kangaroo jump highter than the Empire State Building? Of course. The Empire State Building can't jump.</p>
+        <div id="joke-btn">
           <p>Puntua l'acudit!</p>
-          <button class="bg-primary" id="score-1">1</button>
-          <button class="bg-primary" id="score-2">2</button>
-          <button class="bg-primary" id="score-3">3</button>
+          <img id="score-1" role="button" src="assets/sad.svg" alt="sad">
+          <img id="score-2" role="button" src="assets/neutral.svg" alt="neutral">
+          <img id="score-3" role="button" src="assets/laugh.svg" alt="laugh">
         </div>
-        <div class="pb-2">
+        <div >
           <button
             id="btn"
-            class="btn-primary bg-primary rounded-3 text-white small px-4 py-3 border-0 shadow mt-3"
+            class="btn-primary bg-primary rounded-5 small px-3 py-2 border-1 fw-bold border-black shadow mt-3"
           >
             Següent acudit
           </button>
         </div>
-      </div>
     </div>
-
+  </div>
+</div>
     <script type="module" src="/dist/main.js"></script>
     <script type="module" src="/dist/weather.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

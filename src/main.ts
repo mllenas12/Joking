@@ -66,6 +66,15 @@ const chooseRandomApi = (API_DAD: string, API_CHUCK: string) => {
     }
 }
 
+//Update background image when click "Següent acudit" button
+const changeBlob = () => {
+    const bodyElement: HTMLElement | null = document.querySelector("body");
+    if(bodyElement !== null){
+        const randomNum = Math.floor(Math.random()*5)+1;
+        bodyElement.style.backgroundImage = `url(/assets/blob${randomNum}.svg)`
+        }  
+    }
+    
 // Handle click when clicking the "Següent acudit" button
 const handleClick = async (): Promise<void> => {
     try {
@@ -73,6 +82,7 @@ const handleClick = async (): Promise<void> => {
         const API_CHUCK: string = await getChuckJokesFromApi();
         const chosenApi: any = chooseRandomApi(API_DAD, API_CHUCK);
         displayJoke(chosenApi);
+        changeBlob();
     } catch (error) {
         console.error('Failed to get a joke');
     }
